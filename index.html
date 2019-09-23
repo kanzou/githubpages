@@ -6,5 +6,27 @@
 </head>
 <body>
 	<h1>KANZOU</h1>
+	<h3>これより下はAPIテスト用領域</h3>
+	<div class="api_view_area">
+	</div>
 </body>
+<script>
+	var xhr = new XMLHttpRequest()
+	var requestURL = 'https://github.com/kanzou/api_test/blob/master/api/test/test.json'
+	
+	xhr.open( 'GET', requestURL, true );
+	xhr.onreadystatechange = function()
+	{
+		if(
+			( xhr.readyState === 4 && ( xhr.status === 200 || xhr.status === 0 ) )
+		) {
+			// var json = JSON.parse( xhr.responseText );
+			alert( xhr.responseText );
+		}
+		else {
+			console.log( "failed..." );
+		}
+	};
+	xhr.send( null );
+</script>
 </html>
