@@ -1,2 +1,2 @@
 # githubpages
-github pages
+つまりそういうこと。
